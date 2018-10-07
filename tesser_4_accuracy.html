@@ -3,7 +3,7 @@
 <link href="https://vandnachaturvedi.github.io/CVIT_TIMELINE/styles.css" rel="stylesheet" type="text/css" ></head>
 
 <body>
-<h2>Accuracy of Tesseract v4.0 OCR<h2>
+<h2>Accuracy of Tesseract v4.0 OCR -- <h2>
 
 <table id="table1">
 	<caption><b> Table: Accuracy Of Tesseract v4.0</caption>
@@ -11,7 +11,7 @@
 		<th>Samples</th>
 		<th>Word-wise</th>
 		<th>Character-wise</th>
-		<th>Insights/th>
+		<th>Insights</th>
 	</tr>
 	<tr>
 		<td>Font variation</td>
@@ -32,23 +32,53 @@
 		<td>3210 Characters; 504 Words; 36 Sentences</td>
 	</tr>
 </table>
-<!--
-<br>
-<p>As suggested by PK Sir, starting a pilot study to estimate cost and time for different <i>N</i>, <i>M</i>, <i>K</i>:</p>
-
-<ul>
-	<li>Planning to first annotate <i>M=200</i> images with <i>K=3</i> descriptions each. This requires at least 3 annotators with very good grasp of English.</li>
-	<li>Will get an idea how varied the descriptions can be for each face, hence have accurate annotation guidelines for final full-scale annotation</li>
-	<li>It will give us an approximate of how many unique description classes (N) we will have in the end.</li>
-	<li>Will get approximate cost / image, which is largely dependent on <i>N</i>.</li>
-</ul>
+	<p>  Vocabulary Detail: 51% Unique words, 18% Rare words</p>
 
 <br>
-<p>Found out that Amazon Mechanical Turk Requester account isn’t available to Indian users. Surveyed other similar platforms:</p>
+<p>Did some changes like: </p>
+	<ul>
+	<li>XML appending will be done after all annotations. with very good grasp of English.</li>
+	<li>Annotation button is open for user.</li>
+	<li>During uploadation only OCR output is getting saved in server side.</li>
+	<li>XML parser button to deploy to detect xml parsing error before TTS input.</li>
+	<li>Single uploading can be add to bulk uploaded file (book).</li>
+	<li>Can accept any zipped formatted file.</li>
+	<li></li>
+	</ul>
 
-<ul>
-	<li>Many reputed ones assure better annotation quality at almost the same / lesser prices than Mechanical Turk.</li>
-	<li>Will have more information regarding these platforms by next week.</li>
-</ul>
--->
+	
+
+<br>
+	<h3>for modifying Django Module:</h3>	
+	<ul style="margin-bottom: 10px;">
+		<li>Need to modify  Upload form:
+			<ul>
+				<li>In “Bulk upload” Tab : Going to add new compressing file options like, tar.gz and rar files.</li>
+				<li>Enabling “Single page Uploadation” Tab.</li>
+				<li>Start Modification in html elements: form fields; final submit button.</li>
+			</ul></li>
+	</ul>
+ 	<ul style="margin-bottom: 10px;">
+		<li>Books list:
+			<ul>
+				<li> Will deploy “Search option” over “Book Id” , “Book Name” , “Author Name”, “Book Tags”.</li>
+				<li>Need to modify “Details” Section Of books.</li>
+				<li>Annotate button in place of OCR and Annotation is only user can do.</li>
+				<li>One new button named as “Generate Fresh OCR Output” On “Annotation Page” so that can reset OCR output or Annotated Text.</li>
+			</ul></li>
+	</ul>
+	<ul style="margin-bottom: 10px;">
+		<li>Annotation Mode:
+			<ul>
+				<li> Switch to page dropdown (using selectize.js).</li>
+				<li>Layout changes so that support all the devices as Mobile or Any Computer Monitor Size.</li>
+				<li>Ability to save  and Modify progress of Annotation and can render any time.</li>
+			</ul></li>
+	</ul> 
+	<ul style="margin-bottom: 10px;">
+		<li>Guidelines for annotators:
+			<ul>
+				<li> one Pop-up screen of Guidelines for annotators .</li>
+			</ul></li>
+	</ul> 
 </body>
